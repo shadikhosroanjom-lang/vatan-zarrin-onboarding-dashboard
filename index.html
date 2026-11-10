@@ -177,6 +177,110 @@ footer{font-size:8px}
 }
 @media(max-width:440px){.toolbar{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
 
+
+/* Typography refinement: stronger weights and higher contrast */
+body{font-family:Tahoma,Arial,sans-serif;font-weight:500;color:#102f55;letter-spacing:0}
+h1,.dashboard-header h1{font-weight:900!important;color:#0b2e59}
+.sub,.dashboard-header .sub{font-weight:600!important;color:#35577f!important}
+.section-title{font-weight:900!important;color:#10345f!important}
+.card strong,.kpi-label,.resource-heading h2,.sync-title{font-weight:850!important;color:#12365f!important}
+.kpi-value{font-weight:900!important;color:#0b2e59!important}
+.kpi-note,.resource-heading p,.resource-footer,.sync-sub{font-weight:600!important;color:#536b8d!important}
+label,th{font-weight:800!important;color:#294d78!important}
+td{font-weight:600;color:#243f63}
+input,select,.btn,button{font-weight:700!important}
+.data-table th{font-weight:900!important;color:#234b7d!important}
+.data-table td{font-weight:600;color:#233f64}
+.pill{font-weight:800!important}
+.note{font-weight:600;color:#526b8e}
+
+
+/* Final typography calibration against the supplied Product Learning dashboard screenshot */
+html{font-size:13px}
+body{
+ font-family:Tahoma,Arial,sans-serif!important;
+ font-size:13px!important;
+ font-weight:600!important;
+ line-height:1.9!important;
+ color:#12365f!important;
+ -webkit-font-smoothing:antialiased;
+ text-rendering:optimizeLegibility;
+}
+.dashboard-header h1{
+ font-size:28px!important;
+ line-height:1.55!important;
+ font-weight:900!important;
+ letter-spacing:0!important;
+ color:#0d315c!important;
+}
+.dashboard-header .sub{
+ font-size:11px!important;
+ line-height:1.8!important;
+ font-weight:600!important;
+ color:#45688f!important;
+}
+.header-status{font-size:11px!important;font-weight:800!important;color:#234c7d!important}
+.header-btn{font-size:12px!important;font-weight:800!important;color:#234b7a!important;padding:9px 13px!important}
+.section-title{
+ font-size:16px!important;
+ line-height:1.7!important;
+ font-weight:900!important;
+ color:#10345f!important;
+ margin:18px 0 10px!important;
+}
+.sync-title{font-size:15px!important;font-weight:900!important;color:#12365f!important}
+.sync-sub{font-size:11px!important;font-weight:600!important;color:#526d91!important}
+.sync-status{font-size:10px!important;font-weight:600!important;color:#526d91!important;line-height:1.8!important}
+.btn{font-size:12px!important;font-weight:800!important;padding:9px 13px!important;line-height:1.7!important}
+input,select{
+ font-family:Tahoma,Arial,sans-serif!important;
+ font-size:12px!important;
+ font-weight:700!important;
+ color:#1c4777!important;
+ line-height:1.7!important;
+ min-height:35px!important;
+}
+input::placeholder{font-size:11px!important;font-weight:600!important;color:#7489a7!important;opacity:1!important}
+.resource-heading h2{font-size:16px!important;font-weight:900!important;color:#10345f!important;line-height:1.7!important}
+.resource-heading p{font-size:11px!important;font-weight:600!important;color:#526d91!important;line-height:1.8!important}
+.resource-type{font-size:10px!important;font-weight:900!important}
+.resource-file-info strong{font-size:12px!important;font-weight:900!important;color:#163b67!important}
+.resource-file-info small{font-size:10px!important;font-weight:600!important;color:#586f91!important}
+.resource-open{font-size:11px!important;font-weight:800!important}
+.resource-empty{font-size:11px!important;font-weight:600!important;color:#526b8d!important}
+.resource-empty strong{font-size:12px!important;font-weight:900!important;color:#173d68!important}
+.resource-footer{font-size:10px!important;font-weight:600!important;color:#526b8d!important}
+.kpis{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.kpi-label{font-size:12px!important;font-weight:900!important;color:#183e69!important;line-height:1.7!important}
+.kpi-value{font-size:34px!important;line-height:1.35!important;font-weight:900!important;color:#0b315e!important;margin:2px 0!important}
+.kpi-note{font-size:10px!important;line-height:1.7!important;font-weight:600!important;color:#586f91!important}
+.toolbar{gap:8px!important}
+.toolbar input,.toolbar select{font-size:12px!important}
+.data-table{font-size:12px!important;line-height:1.8!important}
+.data-table th{font-size:11px!important;font-weight:900!important;color:#244d7c!important}
+.data-table td{font-size:12px!important;font-weight:600!important;color:#1b3c63!important}
+.data-table th,.data-table td{padding:10px 9px!important}
+.data-table td b{font-weight:900!important;color:#12365f!important}
+.grid2 strong{font-size:14px!important;font-weight:900!important;color:#12365f!important}
+.barrow{font-size:11px!important;font-weight:700!important;color:#294d78!important}
+.alert{font-size:11px!important;font-weight:700!important;color:#234a76!important;line-height:1.8!important}
+.pill{font-size:10px!important;font-weight:900!important}
+.note{font-size:11px!important;font-weight:600!important;line-height:1.9!important;color:#526b8d!important}
+.step strong{font-size:13px!important;font-weight:900!important;color:#12365f!important}
+.step small{font-size:11px!important;font-weight:600!important;color:#526b8d!important}
+.legend{font-size:11px!important;font-weight:700!important;color:#526b8d!important}
+.modal-box .sub{font-size:11px!important;font-weight:600!important;color:#526b8d!important}
+.close{font-size:12px!important;font-weight:800!important;color:#244b78!important}
+footer{font-size:10px!important;font-weight:600!important;color:#607895!important}
+@media(max-width:700px){
+ .dashboard-header h1{font-size:22px!important}
+ .section-title{font-size:15px!important}
+ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .kpi-value{font-size:29px!important}
+ .resource-heading h2{font-size:14px!important}
+ .data-table{font-size:11px!important}
+}
+
 </style>
 </head>
 <body>
@@ -254,6 +358,7 @@ footer{font-size:8px}
   <tr><td>Market Visit</td><td>همه سمت‌ها؛ همراهی با سرپرست و مدیر مربوطه</td><td>گزارش بازدید و تأیید همراهان</td><td>سرپرست و مدیر مربوطه</td></tr>
   <tr><td>آموزش Odoo</td><td>همه سمت‌ها؛ محتوای متناسب با نقش و سطح دسترسی</td><td>تمرین عملی در محیط مجاز</td><td>مسئول آموزش سیستم</td></tr>
   <tr><td>آموزش محصولات</td><td>همه سمت‌ها؛ سبد کامل محصولات</td><td>آزمون دانش محصول</td><td>واحد آموزش محصول</td></tr>
+  <tr><td>تسلط بر دستورالعمل‌های مرتبط با سمت</td><td>همه سمت‌ها؛ تمام دستورالعمل‌های ابلاغ‌شده و مرتبط با مسئولیت فرد</td><td>مطالعه کامل، سنجش درک مفاد با پرسش/سناریو، رفع ابهام و تأیید تسلط توسط مدیر مربوطه</td><td>مدیر مستقیم با همکاری مالک دستورالعمل</td></tr>
   <tr><td>مهارت‌های تخصصی فروش</td><td>متناسب با سمت</td><td>مشاهده عملی / ارزیابی مدیر</td><td>مدیر مستقیم</td></tr>
   <tr><td>مدیریت و تحلیل عملکرد</td><td>کارشناس فروش و سطوح مدیریتی، متناسب با نقش</td><td>تحلیل گزارش یا تمرین موردی</td><td>مدیر مربوطه</td></tr>
   <tr><td>مدیریت تیم و منطقه</td><td>سرپرست فروش، مدیر فروش و مدیر منطقه</td><td>برنامه عملیاتی و ارزیابی مدیریتی</td><td>مدیر بالادست</td></tr>
@@ -269,20 +374,20 @@ footer{font-size:8px}
 <footer>داشبورد نمونه مدیریت آنبوردینگ فروش | وطن زرین</footer>
 <script>
 const people=[
-{n:"علی رضایی",id:"VZ-1405-001",p:"تهران",r:"ویزیتور",d:"۱۴۰۵/۰۷/۰۱",v:100,s:"تأیید نهایی",steps:[1,1,1,1,1,0,0]},
-{n:"مریم احمدی",id:"VZ-1405-002",p:"اصفهان",r:"کارشناس فروش",d:"۱۴۰۵/۰۷/۰۵",v:75,s:"در حال آموزش",steps:[1,1,1,1,0,0,0]},
-{n:"حسین کریمی",id:"VZ-1405-003",p:"فارس",r:"سرپرست فروش",d:"۱۴۰۵/۰۷/۰۷",v:60,s:"نیازمند پیگیری",steps:[1,1,1,0,0,0,0]},
-{n:"زهرا محمدی",id:"VZ-1405-004",p:"خراسان رضوی",r:"ویزیتور",d:"۱۴۰۵/۰۷/۱۰",v:45,s:"در حال آموزش",steps:[1,1,0,0,0,0,0]},
-{n:"رضا مرادی",id:"VZ-1405-005",p:"تهران",r:"مدیر فروش",d:"۱۴۰۵/۰۷/۱۲",v:100,s:"تأیید نهایی",steps:[1,1,1,1,1,1,1]},
-{n:"نگار موسوی",id:"VZ-1405-006",p:"آذربایجان شرقی",r:"کارشناس فروش",d:"۱۴۰۵/۰۷/۱۴",v:55,s:"در حال آموزش",steps:[1,1,0,1,0,0,0]},
-{n:"امیر جعفری",id:"VZ-1405-007",p:"مازندران",r:"ویزیتور",d:"۱۴۰۵/۰۷/۱۵",v:30,s:"نیازمند پیگیری",steps:[1,0,0,1,0,0,0]},
-{n:"سارا حیدری",id:"VZ-1405-008",p:"خوزستان",r:"سرپرست فروش",d:"۱۴۰۵/۰۷/۱۷",v:85,s:"در حال آموزش",steps:[1,1,1,1,1,0,0]},
-{n:"محمد صالحی",id:"VZ-1405-009",p:"تهران",r:"مدیر منطقه",d:"۱۴۰۵/۰۷/۱۸",v:100,s:"تأیید نهایی",steps:[1,1,1,1,1,1,1]},
-{n:"الهام نادری",id:"VZ-1405-010",p:"اصفهان",r:"کارشناس فروش",d:"۱۴۰۵/۰۷/۲۰",v:65,s:"در حال آموزش",steps:[1,1,1,0,1,0,0]},
-{n:"پیمان قاسمی",id:"VZ-1405-011",p:"فارس",r:"مدیر فروش",d:"۱۴۰۵/۰۷/۲۲",v:70,s:"در حال آموزش",steps:[1,1,1,1,0,0,0]},
-{n:"ندا اکبری",id:"VZ-1405-012",p:"خراسان رضوی",r:"مدیر منطقه",d:"۱۴۰۵/۰۷/۲۴",v:50,s:"در حال آموزش",steps:[1,1,0,1,0,0,0]}
+{n:"علی رضایی",id:"VZ-1405-001",p:"تهران",r:"ویزیتور",d:"۱۴۰۵/۰۷/۰۱",v:100,s:"تأیید نهایی",steps:[1,1,1,1,0,1,0,0]},
+{n:"مریم احمدی",id:"VZ-1405-002",p:"اصفهان",r:"کارشناس فروش",d:"۱۴۰۵/۰۷/۰۵",v:75,s:"در حال آموزش",steps:[1,1,1,1,0,0,0,0]},
+{n:"حسین کریمی",id:"VZ-1405-003",p:"فارس",r:"سرپرست فروش",d:"۱۴۰۵/۰۷/۰۷",v:60,s:"نیازمند پیگیری",steps:[1,1,1,0,0,0,0,0]},
+{n:"زهرا محمدی",id:"VZ-1405-004",p:"خراسان رضوی",r:"ویزیتور",d:"۱۴۰۵/۰۷/۱۰",v:45,s:"در حال آموزش",steps:[1,1,0,0,0,0,0,0]},
+{n:"رضا مرادی",id:"VZ-1405-005",p:"تهران",r:"مدیر فروش",d:"۱۴۰۵/۰۷/۱۲",v:100,s:"تأیید نهایی",steps:[1,1,1,1,0,1,1,1]},
+{n:"نگار موسوی",id:"VZ-1405-006",p:"آذربایجان شرقی",r:"کارشناس فروش",d:"۱۴۰۵/۰۷/۱۴",v:55,s:"در حال آموزش",steps:[1,1,0,1,0,0,0,0]},
+{n:"امیر جعفری",id:"VZ-1405-007",p:"مازندران",r:"ویزیتور",d:"۱۴۰۵/۰۷/۱۵",v:30,s:"نیازمند پیگیری",steps:[1,0,0,1,0,0,0,0]},
+{n:"سارا حیدری",id:"VZ-1405-008",p:"خوزستان",r:"سرپرست فروش",d:"۱۴۰۵/۰۷/۱۷",v:85,s:"در حال آموزش",steps:[1,1,1,1,0,1,0,0]},
+{n:"محمد صالحی",id:"VZ-1405-009",p:"تهران",r:"مدیر منطقه",d:"۱۴۰۵/۰۷/۱۸",v:100,s:"تأیید نهایی",steps:[1,1,1,1,0,1,1,1]},
+{n:"الهام نادری",id:"VZ-1405-010",p:"اصفهان",r:"کارشناس فروش",d:"۱۴۰۵/۰۷/۲۰",v:65,s:"در حال آموزش",steps:[1,1,1,0,0,1,0,0]},
+{n:"پیمان قاسمی",id:"VZ-1405-011",p:"فارس",r:"مدیر فروش",d:"۱۴۰۵/۰۷/۲۲",v:70,s:"در حال آموزش",steps:[1,1,1,1,0,0,0,0]},
+{n:"ندا اکبری",id:"VZ-1405-012",p:"خراسان رضوی",r:"مدیر منطقه",d:"۱۴۰۵/۰۷/۲۴",v:50,s:"در حال آموزش",steps:[1,1,0,1,0,0,0,0]}
 ];
-const stepNames=["ساختار و فرایند فروش","Market Visit","آموزش Odoo متناسب با سمت","آموزش کامل محصولات","مهارت‌های تخصصی فروش","مدیریت و تحلیل عملکرد","مدیریت تیم و منطقه"];
+const stepNames=["ساختار و فرایند فروش","Market Visit","آموزش Odoo متناسب با سمت","آموزش کامل محصولات","تسلط بر دستورالعمل‌های مرتبط با سمت","مهارت‌های تخصصی فروش","مدیریت و تحلیل عملکرد","مدیریت تیم و منطقه"];
 function cls(s){return s==="تأیید نهایی"?"p-green":s==="نیازمند پیگیری"?"p-red":"p-blue"}
 function render(){
  let q=document.getElementById("search").value.trim(),p=document.getElementById("province").value,r=document.getElementById("role").value,s=document.getElementById("status").value;
@@ -314,7 +419,7 @@ function safeHref(v){const u=String(v||"").trim();return /^https:\/\/[^\s"'<>]+$
 
 // Google Sheets CSV connection. Expected headers can be Persian or English.
 // Suggested columns: شناسه نیرو، نام و نام خانوادگی، استان، سمت، تاریخ شروع همکاری، درصد پیشرفت، وضعیت کلی
-// Optional step columns: ساختار و فرایند فروش، Market Visit، آموزش Odoo، آموزش محصولات، مهارت‌های تخصصی فروش، مدیریت و تحلیل عملکرد، مدیریت تیم و منطقه
+// Optional step columns: ساختار و فرایند فروش، Market Visit، آموزش Odoo، آموزش محصولات، تسلط بر دستورالعمل‌های مرتبط با سمت، مهارت‌های تخصصی فروش، مدیریت و تحلیل عملکرد، مدیریت تیم و منطقه
 let dashboardPeople = people;
 const sheetStorageKey='vatanZarrinOnboardingCsvUrl';
 (function initSheetLink(){const el=document.getElementById('sheetCsvUrl');if(el){el.value=localStorage.getItem(sheetStorageKey)||'';}})();
@@ -348,13 +453,14 @@ function parseCSV(text){
    get('Market Visit','بازدید بازار'),
    get('آموزش Odoo','آموزش اودو'),
    get('آموزش محصولات','آموزش محصول'),
-   get('مهارت‌های تخصصی فروش','مهارت تخصصی فروش'),
+   get('تسلط بر دستورالعمل‌های مرتبط با سمت','تسلط بر دستورالعمل ها','آشنایی با دستورالعمل‌ها','دستورالعمل‌ها'),
+   get('مهارت‌های تخصصی فروش' ,'مهارت تخصصی فروش'),
    get('مدیریت و تحلیل عملکرد','مدیریت عملکرد'),
    get('مدیریت تیم و منطقه','مدیریت تیم')
   ].map(v=>/^(1|بله|تکمیل|تکمیل‌شده|انجام‌شده|completed|done)$/i.test(String(v).trim())?1:0);
   const pct=Number(String(get('درصد پیشرفت','پیشرفت آموزش','progress')).replace('%','').replace(',','.'));
   const status=get('وضعیت کلی','وضعیت آنبوردینگ','status')||'در حال آموزش';
-  return {n:get('نام و نام خانوادگی','نام','name'),id:get('شناسه نیرو','کد پرسنلی','شناسه','id'),p:get('استان','محل فعالیت','province'),r:get('سمت','نقش','role'),d:get('تاریخ شروع همکاری','تاریخ شروع','start_date'),v:Number.isFinite(pct)&&pct>0?Math.min(100,pct):Math.round(steps.reduce((a,b)=>a+b,0)/7*100),s:status,steps};
+  return {n:get('نام و نام خانوادگی','نام','name'),id:get('شناسه نیرو','کد پرسنلی','شناسه','id'),p:get('استان','محل فعالیت','province'),r:get('سمت','نقش','role'),d:get('تاریخ شروع همکاری','تاریخ شروع','start_date'),v:Number.isFinite(pct)&&pct>0?Math.min(100,pct):Math.round(steps.reduce((a,b)=>a+b,0)/8*100),s:status,steps};
  }).filter(x=>x.n||x.id);
 }
 async function syncFromGoogleSheets(){
