@@ -25,14 +25,204 @@ input{flex:1;min-width:200px}.btn{border:0;border-radius:9px;padding:10px 15px;b
 footer{text-align:center;color:#8995a5;font-size:10px;padding:20px}
 @media(max-width:850px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
 @media(max-width:520px){header{padding:20px}.kpis{grid-template-columns:1fr 1fr}.kpi-value{font-size:23px}main{padding:0 12px}.steps{grid-template-columns:1fr}}
+
+.directive-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.directive-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.directive-card{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
+.directive-card h3{font-size:13px;margin:0 0 7px;color:var(--navy)}
+.directive-meta{font-size:11px;color:var(--muted);line-height:1.9}
+.directive-empty{padding:20px;text-align:center;color:var(--muted);font-size:12px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:12px;grid-column:1/-1}
+.directive-tag{display:inline-block;padding:3px 8px;border-radius:20px;background:#e8f0fb;color:#245b91;font-size:10px;margin:4px 0}
+@media(max-width:650px){.directive-list{grid-template-columns:1fr}}
+
+
+/* --- Visual redesign: aligned with Panberes Product Learning dashboard --- */
+:root{
+ --navy:#172f50;--blue:#2b6396;--teal:#15958a;--bg:#f4f6f9;--card:#fff;
+ --text:#26374b;--muted:#748196;--line:#e4e9ef;--shadow:0 2px 10px rgba(28,48,73,.055);
+}
+body{background:#f4f6f9;color:var(--text);font-family:Tahoma,Arial,sans-serif}
+.dashboard-header{background:#fff;color:var(--navy);padding:25px max(22px,calc((100% - 1360px)/2));border-bottom:1px solid #e8edf3;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.header-main{min-width:0}.eyebrow{font-size:11px;color:#718096;font-weight:700;margin-bottom:5px}
+.dashboard-header h1{font-size:22px;font-weight:800;color:#1d3555;margin:0 0 5px}
+.dashboard-header .sub{font-size:12px;color:#7a8798}
+.header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.header-status{font-size:10px;padding:6px 10px;border-radius:20px;background:#eef3f8;color:#4c627c}
+.header-btn{border:1px solid #dce4ec;background:#fff;color:#315b82;border-radius:8px;padding:8px 12px;font:inherit;font-size:11px;cursor:pointer}
+main{max-width:1360px;margin:22px auto;padding:0 22px 40px}
+.section-title{font-size:15px;font-weight:800;color:#263f5e;margin:23px 0 11px;display:flex;align-items:center;gap:8px}
+.section-title:before{content:"";width:4px;height:17px;background:#2b6396;border-radius:4px}
+.kpis{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{border:1px solid #e7ecf1;border-radius:11px;box-shadow:var(--shadow);padding:16px}
+.kpi-label{font-size:11px;color:#758296}.kpi-value{font-size:27px;color:#203c5d;font-weight:800}.kpi-note{font-size:10px;color:#8994a3}
+.toolbar{display:grid;grid-template-columns:minmax(220px,1.5fr) repeat(3,minmax(140px,1fr)) auto;gap:8px;background:#fff;border:1px solid #e7ecf1;border-radius:11px;padding:11px;margin-bottom:11px;box-shadow:var(--shadow)}
+input,select{min-width:0;border:1px solid #dfe5ec;border-radius:8px;background:#fff;padding:9px 11px;font-size:11px;color:#34465c}
+input{flex:initial}.btn{border-radius:8px;background:#2b6396;padding:9px 13px;font-size:11px}.btn.secondary{background:#eef3f8;color:#365a7d}
+.data-table{font-size:11px;min-width:830px}.data-table th{background:#f5f7fa;color:#66758a;font-size:10px}.data-table th,.data-table td{padding:11px 9px;border-bottom:1px solid #edf0f4}
+.grid2{grid-template-columns:1.15fr .85fr;gap:12px}
+.grid2>.card{min-height:210px}
+.resource-panel{background:#fff;border:1px solid #e4e9ef;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;margin:24px 0 20px}
+.resource-head{display:flex;align-items:center;gap:12px;padding:15px 17px;border-bottom:1px solid #edf0f4}
+.resource-symbol{width:37px;height:37px;display:grid;place-items:center;border-radius:9px;background:#edf3f9;color:#2b6396;font-size:21px}
+.resource-heading{flex:1}.resource-heading h2{font-size:14px;margin:0;color:#243e5d}.resource-heading p{font-size:10px;color:#7d8999;margin:3px 0 0}
+.resource-type{font-size:10px;font-weight:800;color:#c14b4b;background:#fff0f0;border:1px solid #f3dede;padding:5px 9px;border-radius:6px}
+.resource-content{padding:13px 17px 0}
+.resource-toolbar{display:flex;gap:8px;margin-bottom:12px}
+.resource-toolbar select{width:190px}.resource-toolbar input{flex:1}
+.resource-files{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding-bottom:14px}
+.resource-file{display:flex;align-items:center;gap:11px;border:1px solid #e9edf2;border-radius:9px;padding:11px;background:#fff;min-width:0}
+.resource-file:hover{border-color:#cbd9e7;background:#fbfcfe}
+.pdf-icon{width:39px;height:43px;flex:0 0 39px;display:grid;place-items:center;background:#fff0f0;color:#bd4b4b;border:1px solid #f3dddd;border-radius:6px;font-size:9px;font-weight:800}
+.resource-file-info{flex:1;min-width:0}.resource-file-info strong{display:block;font-size:11px;color:#2a405b;white-space:normal}
+.resource-file-info small{display:block;font-size:9px;color:#8290a0;margin-top:4px}
+.resource-open{white-space:nowrap;text-decoration:none;background:#2b6396;color:#fff;border-radius:7px;padding:7px 10px;font-size:10px}
+.resource-open:hover{background:#1e4e7a}
+.resource-empty{grid-column:1/-1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;text-align:center;min-height:120px;border:1px dashed #d8e0e8;border-radius:9px;background:#fafbfd;color:#7b8797;font-size:10px;padding:16px}
+.resource-empty strong{font-size:11px;color:#52647a}.pdf-large{font-size:10px;font-weight:800;color:#bd4b4b;background:#fff0f0;border:1px solid #f3dddd;border-radius:6px;padding:7px 10px}
+.resource-footer{border-top:1px solid #edf0f4;padding:9px 0 11px;color:#8792a0;font-size:9px}
+.pill{font-size:9px}
+.modal-box{border-radius:12px}
+footer{font-size:9px;color:#96a0ad}
+@media(max-width:850px){.toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-files{grid-template-columns:1fr}}
+@media(max-width:600px){.dashboard-header{padding:18px 14px;align-items:flex-start;flex-direction:column}.dashboard-header h1{font-size:18px}main{padding:0 12px 30px}.toolbar{grid-template-columns:1fr}.resource-toolbar{display:grid}.resource-toolbar select{width:100%}.kpis{gap:8px}.card{padding:12px}}
+@media print{.header-actions,.toolbar,.resource-toolbar{display:none!important}.card,.resource-panel{box-shadow:none}}
+
+
+/* Screenshot-matched visual system */
+:root{
+ --navy:#12365f;--blue:#2b5fa7;--teal:#11834f;--gold:#ad6500;--red:#c22e57;
+ --bg:#f6f8ff;--card:#fff;--text:#17385e;--muted:#7485a2;--line:#d8e3f5;
+ --shadow:0 2px 8px rgba(31,70,122,.055);
+}
+body{background:#f6f8ff;color:var(--text);font-family:Tahoma,Arial,sans-serif;font-size:12px}
+.dashboard-header{
+ max-width:980px;margin:0 auto;background:linear-gradient(105deg,#f4c9e9 0%,#f4e7fb 35%,#f4f9ff 70%,#c8e5ff 100%);
+ color:#12365f;padding:14px 16px;border:0;border-radius:0 0 11px 11px;min-height:76px;
+ display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 5px 18px rgba(57,93,150,.06)
+}
+.dashboard-header h1{font-size:18px;color:#10345f;margin:0 0 2px;font-weight:800}
+.dashboard-header .eyebrow{display:none}
+.dashboard-header .sub{font-size:9px;color:#58759b}
+.header-actions{flex-direction:row-reverse}
+.header-status{background:#f6f8ffbb;border:1px solid #cbdaf2;color:#4c6488;border-radius:8px;font-size:9px}
+.header-btn{font-size:10px;border-color:#d2def0;color:#244d83;background:#fff;padding:7px 10px}
+main{max-width:980px;margin:8px auto;padding:0 10px 30px}
+.section-title{font-size:12px;color:#12365f;margin:14px 0 7px;gap:0}
+.section-title:before{display:none}
+.card,.resource-panel{border:1px solid #d8e3f5;border-radius:9px;box-shadow:var(--shadow);background:#fff}
+.card{padding:12px}
+.toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:8px;border-radius:9px;margin:8px 0 10px}
+input,select{font-family:inherit;font-size:10px;border:1px solid #b9c9e3;border-radius:6px;padding:6px 8px;color:#244b7b;background:#fff;min-height:30px}
+input::placeholder{color:#8293af}
+.btn{background:#2b5fa7;border-radius:7px;font-size:10px;padding:7px 10px}
+.btn.secondary{background:#fff;border:1px solid #d5e0f1;color:#244b7b}
+.kpis{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:10px 0}
+.kpis .card{padding:8px 10px;text-align:center;border-right:3px solid #2b5fa7;min-height:72px}
+.kpis .card:nth-child(2){border-right-color:#11834f}
+.kpis .card:nth-child(3){border-right-color:#ad6500}
+.kpis .card:nth-child(4){border-right-color:#2b5fa7}
+.kpis .card:nth-child(5){border-right-color:#c22e57}
+.kpi-label{font-size:9px;color:#234b7d;font-weight:700}
+.kpi-value{font-size:23px;color:#12365f;margin:0;font-weight:800}
+.kpi-note{font-size:8px;color:#8493aa}
+.grid2{grid-template-columns:1fr 1fr;gap:9px}
+.grid2>.card{min-height:185px;padding:12px}
+.grid2 strong{font-size:11px!important;color:#12365f}
+.barrow{grid-template-columns:82px 1fr 28px;font-size:9px;gap:6px}
+.track{height:7px;background:#edf0fa}
+.track span{background:#11834f}
+.alert{font-size:10px;padding:8px 0}
+.data-table{font-size:10px;min-width:780px}
+.data-table th{font-size:9px;background:#f5f7fc;color:#6d7f9b}
+.data-table th,.data-table td{padding:8px 7px;border-bottom:1px solid #edf1f8}
+.pill{font-size:8px}
+.progress{height:6px;background:#edf0fa}
+.progress i{background:#11834f}
+.resource-panel{margin:0;overflow:hidden}
+.resource-head{padding:9px 11px;border:0}
+.resource-symbol{width:30px;height:30px;background:#f5e8fb;color:#8836a1;font-size:17px}
+.resource-heading h2{font-size:11px;color:#12365f}
+.resource-heading p{font-size:8px}
+.resource-type{font-size:8px;background:#f3e9fb;color:#8c3ca5;border-color:#ead8f3}
+.resource-content{padding:5px 11px 0}
+.resource-toolbar{margin-bottom:8px}
+.resource-toolbar select,.resource-toolbar input{font-size:9px}
+.resource-file{padding:8px;border-color:#e3eaf6}
+.resource-open{background:#2b5fa7;font-size:9px}
+.resource-empty{min-height:74px;font-size:9px}
+.resource-footer{font-size:8px}
+.modal-box{border:1px solid #d8e3f5}
+footer{font-size:8px}
+.top-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:9px 0}
+.top-actions .resource-panel{min-height:112px}
+.top-actions .resource-head{padding:9px 11px}
+.top-actions .resource-content{padding:2px 11px 8px}
+.top-actions .resource-toolbar{display:flex;align-items:center;flex-wrap:wrap}
+.top-actions .resource-toolbar input{min-width:0;flex:1}
+.sync-panel{background:#fff;border:1px solid #d8e3f5;border-radius:9px;padding:9px 11px;box-shadow:var(--shadow);margin:7px 0 9px}
+.sync-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.sync-title{font-size:11px;font-weight:800;color:#12365f}
+.sync-sub{font-size:8px;color:#7587a2;margin-top:2px}
+.sync-controls{display:flex;gap:6px;align-items:center;margin-top:7px}
+.sync-controls input{flex:1;min-width:100px}
+.sync-status{font-size:8px;color:#7587a2;margin-top:5px;min-height:14px}
+.sync-status.ok{color:#11834f}.sync-status.err{color:#c22e57}
+@media(max-width:700px){
+ .dashboard-header{margin:0 8px;padding:12px;align-items:flex-start;flex-direction:column}
+ main{padding:0 8px 25px}
+ .top-actions,.grid2{grid-template-columns:1fr}
+ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .sync-controls{flex-wrap:wrap}.sync-controls input{flex-basis:100%}
+}
+@media(max-width:440px){.toolbar{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
 <body>
-<header>
- <div><h1>داشبورد مدیریتی آنبوردینگ نیروهای فروش</h1><div class="sub">پایش آموزش، ارزیابی و احراز آمادگی شروع فعالیت مستقل</div></div>
- <div class="brand">شرکت وطن زرین | نسخه نمایشی</div>
+<header class="dashboard-header">
+ <div class="header-main">
+  <div class="eyebrow">شرکت وطن زرین</div>
+  <h1>داشبورد مدیریتی آنبوردینگ نیروهای فروش</h1>
+  <div class="sub">پایش مسیر ورود، آموزش، ارزیابی و آمادگی شروع فعالیت مستقل</div>
+ </div>
+ <div class="header-actions">
+  <span class="header-status">اطلاعات نیروها و مسیر آموزشی</span>
+  <button class="header-btn" onclick="window.print()">خروجی / چاپ گزارش</button>
+ </div>
 </header>
 <main>
+ <div class="sync-panel">
+  <div class="sync-top">
+   <div><div class="sync-title">به‌روزرسانی اطلاعات از Google Sheets</div><div class="sync-sub">اتصال به شیت منتشرشده با فرمت CSV؛ آخرین اطلاعات نیروها و وضعیت آموزش دریافت می‌شود.</div></div>
+   <button class="btn" id="syncBtn" onclick="syncFromGoogleSheets()">به‌روزرسانی از گوگل‌شیت</button>
+  </div>
+  <div class="sync-controls">
+   <input id="sheetCsvUrl" type="url" placeholder="لینک CSV منتشرشده Google Sheets را اینجا وارد کنید">
+   <button class="btn secondary" onclick="saveSheetUrl()">ذخیره لینک</button>
+   <button class="btn secondary" onclick="downloadCurrentCSV()">خروجی CSV افراد</button>
+  </div>
+  <div id="syncStatus" class="sync-status">برای اتصال، لینک انتشار CSV شیت اطلاعات نیروها را وارد و ذخیره کنید. لینک در همین مرورگر نگهداری می‌شود.</div>
+ </div>
+ <section class="top-actions">
+  <section class="resource-panel" id="onboardingQuick">
+   <div class="resource-head"><div class="resource-symbol">✓</div><div class="resource-heading"><h2>مدیریت پرونده آنبوردینگ</h2><p>ثبت و پیگیری وضعیت آموزش نیروهای جدید فروش</p></div></div>
+   <div class="resource-content"><div class="resource-toolbar">
+    <button class="btn" onclick="document.getElementById('rows').scrollIntoView({behavior:'smooth'})">مشاهده فهرست نیروها</button>
+    <button class="btn secondary" onclick="downloadCurrentCSV()">دریافت خروجی افراد</button>
+   </div><div class="resource-footer">اطلاعات قابل نمایش از فایل CSV متصل‌شده یا داده‌های نمونه داشبورد تأمین می‌شود.</div></div>
+  </section>
+  <section class="resource-panel" id="directives">
+   <div class="resource-head"><div class="resource-symbol">▤</div><div class="resource-heading"><h2>فایل دستورالعمل‌ها و منابع شغلی</h2><p>دسترسی به آخرین نسخه دستورالعمل‌های موردنیاز نیروهای فروش</p></div><span class="resource-type">PDF</span></div>
+   <div class="resource-content">
+    <div class="resource-toolbar">
+     <select id="directiveRole" onchange="renderDirectives()"><option value="">همه سمت‌ها</option><option>ویزیتور</option><option>کارشناس فروش</option><option>سرپرست فروش</option><option>مدیر فروش</option><option>مدیر منطقه</option><option>همه سمت‌ها</option></select>
+     <input id="directiveSearch" placeholder="جست‌وجوی عنوان دستورالعمل..." oninput="renderDirectives()">
+    </div>
+    <div id="directiveList" class="resource-files"><div class="resource-empty"><div class="pdf-large">PDF</div><strong>هنوز لینکی برای فایل دستورالعمل ثبت نشده است.</strong><span>لینک فایل‌ها را در شیت «دستورالعمل ها» ثبت کنید.</span></div></div>
+   </div>
+  </section>
+ </section>
  <div class="section-title">نمای کلی وضعیت آنبوردینگ</div>
  <section class="kpis">
   <div class="card"><div class="kpi-label">کل نیروهای جدید</div><div class="kpi-value" id="total">۱۲</div><div class="kpi-note">در داده‌های نمونه</div></div>
@@ -70,7 +260,10 @@ footer{text-align:center;color:#8995a5;font-size:10px;padding:20px}
   </tbody></table></div>
   <div class="note">این ماتریس، چارچوب پیشنهادی اولیه است و باید با شرح وظایف، ساختار سازمانی و سطح دسترسی واقعی Odoo در وطن زرین تأیید شود.</div>
  </div>
- <div class="note">توجه: تمام اسامی، کدها، تاریخ‌ها، وضعیت‌ها و درصدهای این نمونه ساختگی‌اند. فایل‌های آموزشی واقعی هنوز به این نمونه متصل نشده‌اند. این نسخه نمایشی است و اطلاعات آن با بارگذاری مجدد ذخیره نمی‌شود.</div>
+ 
+  
+
+  <div class="note" id="dataNote">توجه: تا پیش از اتصال به Google Sheets، اطلاعات این صفحه صرفاً داده نمونه برای نمایش عملکرد داشبورد است. پس از اتصال موفق، داده‌های فایل CSV جایگزین داده‌های نمونه می‌شوند.</div>
 </main>
 <div class="modal" id="modal" onclick="if(event.target.id==='modal')closeModal()"><div class="modal-box"><div class="modal-head"><div><strong id="mname"></strong><div class="sub" id="mmeta" style="color:#718096"></div></div><button class="close" onclick="closeModal()">بستن</button></div><div id="msteps" class="steps"></div><div class="note">در نسخه عملیاتی، فایل PDF/PPT، تاریخ اجرا، نام مدرس، نتیجه ارزیابی و تأییدکننده برای هر مرحله به این پرونده متصل می‌شود.</div></div></div>
 <footer>داشبورد نمونه مدیریت آنبوردینگ فروش | وطن زرین</footer>
@@ -93,21 +286,117 @@ const stepNames=["ساختار و فرایند فروش","Market Visit","آمو�
 function cls(s){return s==="تأیید نهایی"?"p-green":s==="نیازمند پیگیری"?"p-red":"p-blue"}
 function render(){
  let q=document.getElementById("search").value.trim(),p=document.getElementById("province").value,r=document.getElementById("role").value,s=document.getElementById("status").value;
- let arr=people.filter(x=>(!q||(x.n+x.id).includes(q))&&(!p||x.p===p)&&(!r||x.r===r)&&(!s||x.s===s));
+ let arr=dashboardPeople.filter(x=>(!q||(x.n+x.id).includes(q))&&(!p||x.p===p)&&(!r||x.r===r)&&(!s||x.s===s));
  document.getElementById("rows").innerHTML=arr.map(x=>`<tr><td><b>${x.n}</b></td><td>${x.id}</td><td>${x.p}</td><td>${x.r}</td><td><span class="progress"><i style="width:${x.v}%"></i></span>${x.v}%</td><td><span class="pill ${cls(x.s)}">${x.s}</span></td><td>${x.d}</td><td><button class="btn" onclick="detail('${x.id}')">مشاهده پرونده</button></td></tr>`).join("")||'<tr><td colspan="8">موردی یافت نشد.</td></tr>';
 }
 function resetFilters(){["search","province","role","status"].forEach(id=>document.getElementById(id).value="");render()}
 function detail(id){
- let x=people.find(a=>a.id===id);document.getElementById("mname").textContent=x.n;document.getElementById("mmeta").textContent=`${x.id} | ${x.r} | ${x.p} | پیشرفت ${x.v}%`;
+ let x=dashboardPeople.find(a=>a.id===id);document.getElementById("mname").textContent=x.n;document.getElementById("mmeta").textContent=`${x.id} | ${x.r} | ${x.p} | پیشرفت ${x.v}%`;
  document.getElementById("msteps").innerHTML=stepNames.map((n,i)=>`<div class="step"><strong>${n}</strong><small>${i===1?"الزامی برای همه؛ همراهی سرپرست و مدیر":i===2?"الزامی برای همه؛ محتوای نقش‌محور":i===3?"الزامی برای همه؛ سبد کامل محصولات":"متناسب با سمت و مسیر آموزشی"}</small><span class="pill ${x.steps[i]?"p-green":"p-orange"}">${x.steps[i]?"تکمیل‌شده":"باقی‌مانده / نیازمند بررسی"}</span></div>`).join("");
  document.getElementById("modal").classList.add("show");
 }
+
+const directives=[]; // در نسخه متصل، از شیت «دستورالعمل ها» خوانده می‌شود.
+function renderDirectives(){
+ const q=(document.getElementById("directiveSearch")?.value||"").trim().toLowerCase();
+ const role=document.getElementById("directiveRole")?.value||"";
+ const filtered=directives.filter(d=>(!q||(d.title||"").toLowerCase().includes(q))&&(!role||d.role==="همه سمت‌ها"||d.role===role));
+ const box=document.getElementById("directiveList");
+ if(!filtered.length){
+  box.innerHTML=directives.length?'<div class="resource-empty"><strong>فایلی با این فیلتر پیدا نشد.</strong><span>فیلترها را تغییر دهید.</span></div>':'<div class="resource-empty"><div class="pdf-large">PDF</div><strong>هنوز لینکی برای فایل دستورالعمل ثبت نشده است.</strong><span>پس از ثبت لینک مشاهده PDF در شیت «دستورالعمل ها»، فایل‌ها در این قسمت نمایش داده می‌شوند.</span></div>';
+  return;
+ }
+ box.innerHTML=filtered.map(d=>`<article class="resource-file"><div class="pdf-icon">PDF</div><div class="resource-file-info"><strong>${safeText(d.title||"بدون عنوان")}</strong><small>${safeText(d.role||"همه سمت‌ها")} ${d.version?" | نسخه "+safeText(d.version):""} ${d.date?" | "+safeText(d.date):""}</small></div><a class="resource-open" href="${safeHref(d.url)}" target="_blank" rel="noopener">باز کردن فایل ↗</a></article>`).join("");
+}
+function safeText(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function safeHref(v){const u=String(v||"").trim();return /^https:\/\/[^\s"'<>]+$/i.test(u)?u:"#"}
+
+
+// Google Sheets CSV connection. Expected headers can be Persian or English.
+// Suggested columns: شناسه نیرو، نام و نام خانوادگی، استان، سمت، تاریخ شروع همکاری، درصد پیشرفت، وضعیت کلی
+// Optional step columns: ساختار و فرایند فروش، Market Visit، آموزش Odoo، آموزش محصولات، مهارت‌های تخصصی فروش، مدیریت و تحلیل عملکرد، مدیریت تیم و منطقه
+let dashboardPeople = people;
+const sheetStorageKey='vatanZarrinOnboardingCsvUrl';
+(function initSheetLink(){const el=document.getElementById('sheetCsvUrl');if(el){el.value=localStorage.getItem(sheetStorageKey)||'';}})();
+
+function saveSheetUrl(){
+ const url=document.getElementById('sheetCsvUrl').value.trim();
+ if(!/^https:\/\//i.test(url)){setSyncStatus('لینک معتبر HTTPS برای CSV وارد کنید.','err');return;}
+ localStorage.setItem(sheetStorageKey,url);
+ setSyncStatus('لینک Google Sheets در این مرورگر ذخیره شد. برای دریافت داده‌ها، «به‌روزرسانی از گوگل‌شیت» را انتخاب کنید.','ok');
+}
+function setSyncStatus(msg,kind=''){const el=document.getElementById('syncStatus');el.textContent=msg;el.className='sync-status '+kind;}
+function normalizeHeader(v){return String(v||'').trim().toLowerCase().replace(/[\\u200c\\s_ـ]/g,'').replace(/[ي]/g,'ی').replace(/[ك]/g,'ک');}
+function parseCSV(text){
+ const rows=[];let row=[],field='',quoted=false;
+ for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];
+  if(c==='"'&&quoted&&n==='"'){field+='"';i++;}
+  else if(c==='"'){quoted=!quoted;}
+  else if(c===','&&!quoted){row.push(field);field='';}
+  else if((c==='\\n'||c==='\\r')&&!quoted){if(c==='\\r'&&n==='\\n')i++;row.push(field);if(row.some(x=>x.trim()))rows.push(row);row=[];field='';}
+  else field+=c;
+ }
+ row.push(field);if(row.some(x=>x.trim()))rows.push(row);
+ if(rows.length<2)return [];
+ const headers=rows.shift().map(normalizeHeader);
+ const pick=(obj,names)=>{for(const name of names){const i=headers.indexOf(normalizeHeader(name));if(i>=0)return obj[i]||'';}return '';};
+ return rows.map(r=>{
+  const obj={};headers.forEach((h,i)=>obj[h]=r[i]||'');
+  const get=(...names)=>pick(obj,names);
+  const steps=[
+   get('ساختار و فرایند فروش','ساختاروفرايندفروش'),
+   get('Market Visit','بازدید بازار'),
+   get('آموزش Odoo','آموزش اودو'),
+   get('آموزش محصولات','آموزش محصول'),
+   get('مهارت‌های تخصصی فروش','مهارت تخصصی فروش'),
+   get('مدیریت و تحلیل عملکرد','مدیریت عملکرد'),
+   get('مدیریت تیم و منطقه','مدیریت تیم')
+  ].map(v=>/^(1|بله|تکمیل|تکمیل‌شده|انجام‌شده|completed|done)$/i.test(String(v).trim())?1:0);
+  const pct=Number(String(get('درصد پیشرفت','پیشرفت آموزش','progress')).replace('%','').replace(',','.'));
+  const status=get('وضعیت کلی','وضعیت آنبوردینگ','status')||'در حال آموزش';
+  return {n:get('نام و نام خانوادگی','نام','name'),id:get('شناسه نیرو','کد پرسنلی','شناسه','id'),p:get('استان','محل فعالیت','province'),r:get('سمت','نقش','role'),d:get('تاریخ شروع همکاری','تاریخ شروع','start_date'),v:Number.isFinite(pct)&&pct>0?Math.min(100,pct):Math.round(steps.reduce((a,b)=>a+b,0)/7*100),s:status,steps};
+ }).filter(x=>x.n||x.id);
+}
+async function syncFromGoogleSheets(){
+ const url=document.getElementById('sheetCsvUrl').value.trim()||localStorage.getItem(sheetStorageKey)||'';
+ if(!url){setSyncStatus('ابتدا لینک CSV منتشرشده Google Sheets را وارد کنید.','err');return;}
+ const btn=document.getElementById('syncBtn');btn.disabled=true;btn.textContent='در حال دریافت...';
+ try{
+  const response=await fetch(url,{cache:'no-store'});
+  if(!response.ok)throw new Error('خطای دریافت فایل: '+response.status);
+  const csv=await response.text();
+  const parsed=parseCSV(csv);
+  if(!parsed.length)throw new Error('داده‌ای قابل خواندن پیدا نشد؛ فایل باید CSV دارای ردیف عنوان ستون‌ها باشد.');
+  dashboardPeople=parsed;
+  render();analytics();
+  setSyncStatus('به‌روزرسانی موفق؛ '+parsed.length+' پرونده از Google Sheets دریافت شد.','ok');
+  const note=document.getElementById('dataNote');if(note)note.textContent='اطلاعات این داشبورد از فایل CSV منتشرشده Google Sheets دریافت شده است. برای دریافت تغییرات جدید، دکمه به‌روزرسانی را انتخاب کنید.';
+  localStorage.setItem(sheetStorageKey,url);
+ }catch(e){
+  setSyncStatus('به‌روزرسانی انجام نشد. لینک باید از مسیر File → Share → Publish to web و با قالب CSV منتشر شده باشد. جزئیات: '+e.message,'err');
+ }finally{btn.disabled=false;btn.textContent='به‌روزرسانی از گوگل‌شیت';}
+}
+function downloadCurrentCSV(){
+ const rows=[['شناسه نیرو','نام و نام خانوادگی','استان','سمت','تاریخ شروع','درصد پیشرفت','وضعیت کلی'],...dashboardPeople.map(x=>[x.id,x.n,x.p,x.r,x.d,x.v,x.s])];
+ const csv='\\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\\r\\n');
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='vatan-zarrin-onboarding.csv';a.click();URL.revokeObjectURL(a.href);
+}
+
 function closeModal(){document.getElementById("modal").classList.remove("show")}
 function analytics(){
  const roles=["ویزیتور","کارشناس فروش","سرپرست فروش","مدیر فروش","مدیر منطقه"];
- document.getElementById("roleBars").innerHTML=roles.map(r=>{let a=people.filter(x=>x.r===r),v=Math.round(a.reduce((s,x)=>s+x.v,0)/a.length);return `<div class="barrow"><span>${r}</span><div class="track"><span style="width:${v}%"></span></div><b>${v}%</b></div>`}).join("");
- document.getElementById("alerts").innerHTML=people.filter(x=>x.s==="نیازمند پیگیری").map(x=>`<div class="alert"><span>${x.n} <small style="color:#718096">(${x.r} - ${x.p})</small></span><span class="pill p-red">پیگیری مدیر</span></div>`).join("");
+ document.getElementById("roleBars").innerHTML=roles.map(r=>{let a=dashboardPeople.filter(x=>x.r===r),v=a.length?Math.round(a.reduce((s,x)=>s+x.v,0)/a.length):0;return `<div class="barrow"><span>${r}</span><div class="track"><span style="width:${v}%"></span></div><b>${v}%</b></div>`}).join("");
+ document.getElementById("alerts").innerHTML=dashboardPeople.filter(x=>x.s==="نیازمند پیگیری").map(x=>`<div class="alert"><span>${x.n} <small style="color:#718096">(${x.r} - ${x.p})</small></span><span class="pill p-red">پیگیری مدیر</span></div>`).join("");
 }
-render();analytics();
+function updateKpis(){
+ const total=dashboardPeople.length,approved=dashboardPeople.filter(x=>x.s==="تأیید نهایی"||x.s==="تأییدشده برای فعالیت مستقل").length;
+ const overdue=dashboardPeople.filter(x=>x.s==="نیازمند پیگیری").length,ongoing=Math.max(0,total-approved-overdue);
+ document.getElementById('total').textContent=total.toLocaleString('fa-IR');
+ document.getElementById('approved').textContent=approved.toLocaleString('fa-IR');
+ document.getElementById('ongoing').textContent=ongoing.toLocaleString('fa-IR');
+ document.getElementById('overdue').textContent=overdue.toLocaleString('fa-IR');
+}
+const originalRender=render;render=function(){originalRender();updateKpis();};
+render();analytics();renderDirectives();
 </script>
 </body></html>
